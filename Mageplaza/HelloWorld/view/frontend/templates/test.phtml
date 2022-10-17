@@ -1,0 +1,57 @@
+<?php
+/**
+ * @var Mageplaza\HelloWorld\Block\Test $block;
+ */
+
+$all = $block->allData();
+?>
+<table style="width: 100%;">
+    <tr>
+        <th>Post Id</th>
+        <th>Name</th>
+        <th>Post Content</th>
+    </tr>
+    <?php
+    foreach ($all as $allData){
+    ?>
+    <tr>
+        <th><?php echo $allData->getPostId() ?></th>
+        <th><?php echo $allData->getName() ?></th>
+        <th><?php echo $allData->getPostContent() ?></th>
+    </tr>
+<?php
+}
+?>
+</table><br><br>
+
+
+<div class="slick-slider">
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+    <div class="item"><img src="https://placeimg.com/640/480/tech"/></div>
+</div>
+
+<script>
+    require(['jquery', 'jquery/ui', 'slick'], function($){
+        $(document).ready(function() {
+            $('.slick-slider').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                autoplay: true
+            });
+        });
+    });
+</script>
+
+
