@@ -1,0 +1,10 @@
+<?php
+$helper = $this->helper('MageMastery\FirstModule\Helper\Data');
+$value = $helper->getConfig();
+
+if($value == 1){
+    echo $block->getProduct()->getTest();
+} else {
+    echo "module is desable";
+}
+?>

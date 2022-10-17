@@ -1,0 +1,13 @@
+<?php
+// $product = $block->getProdcuts();
+// $attributes = $product->getAttributes();
+// foreach($attributes as $a)
+// {
+//     echo $a->getName()."\n";
+// }
+
+// echo $block->newFunction();
+
+$product = $block->getProduct();
+?>
+<h1 style="color: #blue"><?php echo $product->getData('test'); ?></h1>

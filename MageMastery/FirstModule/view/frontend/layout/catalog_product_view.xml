@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceBlock name="product.info.details">
+        <block class="Magento\Catalog\Block\Product\View" name="test.tab" template="MageMastery_FirstModule::custom_tab.phtml" group="detailed_info">
+        <arguments>
+            <argument translate="true" name="title" xsi:type="string">Custom Tab</argument>
+        </arguments>
+        </block>
+    </referenceBlock>
+
+    <referenceBlock name="product.info.main">
+        <block class="Magento\Catalog\Block\Product\View" name="get.attribute" template="MageMastery_FirstModule::showAttribute.phtml" group="detailed_info">
+        </block>
+    </referenceBlock>
+</body>
+</page>

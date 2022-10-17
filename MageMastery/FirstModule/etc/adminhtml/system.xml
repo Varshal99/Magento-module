@@ -1,0 +1,38 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="testdata" showInDefault="1" showInWebsite="0" showInStore="1" sortOrder="10" translate="label">
+            <resource>Salecto_FrontendThemeModule::custom</resource>
+            <label>A meaningful section label</label>
+            <tab>salecto</tab>
+
+            <group id="groupid" translate="label" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+                <label>A meaningful group label</label>
+                <comment>An additional comment helping users to understand the effect when configuring the fields defined in this group.</comment>
+
+                <field id="data" translate="label" sortOrder="10" showInDefault="0" showInWebsite="0" showInStore="1" type="select">
+                    <label>Custom tag</label>
+                    <comment>This field is an example for a basic yes or no select.</comment>
+                    <tooltip>Usually these kinds of fields are used to enable or disable a given feature. Other fields might be dependent to this and will only appear if this field is set to yes.</tooltip>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="ANOTHER_UNIQUE_FIELD_ID" translate="label" sortOrder="10" showInDefault="0" showInWebsite="0" showInStore="1" type="text">
+                    <label>A meaningful field label</label>
+                    <comment>A descriptive text explaining this configuration field.</comment>
+                    <tooltip>Another possible frontend element that also can be used to describe the meaning of this field. Will be displayed as a small icon beside the field.</tooltip>
+                    <validate>required-entry no-whitespace</validate> <!-- Field is required and must not contain any whitespace. -->
+                    <if_module_enabled>VENDOR_MODULE</if_module_enabled>
+                    <depends> <!-- This field will only be visible if the field with the id A_UNIQUE_FIELD_ID is set to value 1 -->
+                        <field id="A_UNIQUE_FIELD_ID">1</field>
+                    </depends>
+                </field>
+
+                <field id="test" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Display Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                    <tooltip>This field is created for only testing purpose.</tooltip>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

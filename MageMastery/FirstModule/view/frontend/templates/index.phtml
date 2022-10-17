@@ -1,0 +1,25 @@
+<?php
+//  if($block->getconfig() == 1){ 
+// 	echo $block->getPopupContent();
+	$productCollection = $block->getProductCollection();
+	foreach ($productCollection as $product) {
+		print_r($product->getData('entity_id'));     
+		echo "<br>";
+
+		// if($product->getData('entity_id') <= 2040)
+		// {
+		// 	return $product->getData('entity_id');
+		// }
+	}	
+	
+
+// $linkedproducts = $this->helper('MyModule\LinkedProducts\Helper\Data');
+// $relatedProducts = $linkedproducts->getLinkedProducts();
+
+// foreach ($relatedProducts as $relatedProduct) {
+
+// $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+// $_product = $objectManager->create('Magento\Catalog\Model\Product')->load($relatedProduct->getId());
+// echo $_product->getData('test');
+// }
+?>
